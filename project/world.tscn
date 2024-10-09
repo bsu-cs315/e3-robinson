@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://gypkc3x8cumm"]
+
+[ext_resource type="PackedScene" uid="uid://coke4xdeeopxp" path="res://cannon.tscn" id="1_7c1cv"]
+[ext_resource type="Script" path="res://world.gd" id="1_u52jl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6n2oy"]
+
+[sub_resource type="Environment" id="Environment_rjcw5"]
+ambient_light_source = 2
+ambient_light_color = Color(0.572988, 0.572988, 0.572988, 1)
+
+[node name="World" type="Node3D"]
+script = ExtResource("1_u52jl")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+use_collision = true
+size = Vector3(100, 1, 100)
+material = SubResource("StandardMaterial3D_6n2oy")
+
+[node name="Cannon" parent="." instance=ExtResource("1_7c1cv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.841547, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_rjcw5")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.175442, 1.43423, -4.35599)
