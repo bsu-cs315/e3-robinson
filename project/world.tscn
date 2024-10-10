@@ -32,3 +32,4 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 5.3
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.894306, 3.07853, 2.86535)
 
 [connection signal="launched" from="Cannon" to="." method="_on_cannon_launched"]
+[connection signal="hit" from="Target" to="." method="_on_target_hit"]
