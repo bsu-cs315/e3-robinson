@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://coke4xdeeopxp"]
+[gd_scene load_steps=3 format=3 uid="uid://coke4xdeeopxp"]
 
 [ext_resource type="Script" path="res://cannon/cannon.gd" id="1_ieu6s"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pls8y"]
+albedo_color = Color(0.264228, 8.61781e-05, 0.289069, 1)
 
 [node name="Cannon" type="Node3D"]
 script = ExtResource("1_ieu6s")
@@ -10,6 +13,7 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 
 radius = 0.2
 height = 1.0
 sides = 20
+material = SubResource("StandardMaterial3D_pls8y")
 
 [node name="SpawnPoint" type="Marker3D" parent="CSGCylinder3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.791245, 3.45864e-08)
@@ -19,10 +23,25 @@ offset_right = 40.0
 offset_bottom = 23.0
 
 [node name="PowerLabel" type="Label" parent="."]
-offset_left = 3.0
 offset_top = 33.0
-offset_right = 43.0
+offset_right = 40.0
 offset_bottom = 56.0
+
+[node name="ReloadLabel" type="Label" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -45.0
+offset_top = 225.0
+offset_right = 45.0
+offset_bottom = 248.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+text = "Reloading..."
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.542537, 0.583518)

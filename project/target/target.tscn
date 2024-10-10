@@ -8,6 +8,7 @@ albedo_color = Color(1, 0, 0.105882, 1)
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_7tkx8"]
 height = 0.0782812
+radius = 0.661444
 
 [node name="Target" type="Area3D" groups=["targets"]]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)

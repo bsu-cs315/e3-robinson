@@ -6,11 +6,14 @@ extends Node3D
 
 @onready var score_label: Label = $Cannon/ScoreLabel
 @onready var shots_fired_label: Label = $Cannon/ShotsFired
+@onready var win_label: Label = $Cannon/WinLabel
+
 
 func _process(_delta: float) -> void:
 	score_label.text = "Score: %.d" % score
 	shots_fired_label.text = "Shots: %.d" % shots_fired
-	if score == 3:
+	if score == 5:
+		win_label.show()
 		await get_tree().create_timer(5).timeout
 		get_tree().change_scene_to_file("res://title_screen/title_screen.tscn")
 
