@@ -2,12 +2,12 @@ extends Node3D
 
 
 signal launched
-@export var launch_angle := -TAU/8
-@export var angle_change_rate := TAU/8
-@export var power := 50.0
-@export var power_change_rate := 10
-@export var swivel := -TAU/8
-@export var swivel_change_rate := TAU/8
+var launch_angle := -TAU/8
+var angle_change_rate := TAU/8
+var power := 50.0
+var power_change_rate := 10
+var swivel := -TAU/8
+var swivel_change_rate := TAU/8
 var _launched := false
 
 @onready var cannon_shaft: CSGCylinder3D = $CSGCylinder3D

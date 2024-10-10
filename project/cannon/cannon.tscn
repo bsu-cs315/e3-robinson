@@ -26,3 +26,4 @@ offset_bottom = 56.0
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.542537, 0.583518)
+fov = 50.5
