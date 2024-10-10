@@ -1,6 +1,7 @@
 extends Node3D
 
 
+signal launched
 @export var launch_angle := -TAU/8
 @export var angle_change_rate := TAU/8
 @export var power := 50.0
@@ -40,6 +41,7 @@ func _physics_process(delta: float) -> void:
 		var impulse := self.get_global_transform().basis.z
 		var ball: RigidBody3D = preload("res://ball/ball.tscn").instantiate()
 		get_parent().add_child(ball)
+		launched.emit()
 		ball.global_position = spawn_point.global_position
 		ball.apply_impulse(-1 * impulse * power)
 		await get_tree().create_timer(3).timeout
