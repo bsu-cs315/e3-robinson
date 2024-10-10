@@ -1,11 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://g42twu6rb077"]
-
-[ext_resource type="Script" path="res://ball.gd" id="1_b2edh"]
+[gd_scene load_steps=2 format=3 uid="uid://g42twu6rb077"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_dcucv"]
 
-[node name="Ball" type="RigidBody3D"]
-script = ExtResource("1_b2edh")
+[node name="Ball" type="RigidBody3D" groups=["balls"]]
 
 [node name="CSGSphere3D" type="CSGSphere3D" parent="."]
 use_collision = true

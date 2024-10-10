@@ -1,11 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://gypkc3x8cumm"]
+[gd_scene load_steps=6 format=3 uid="uid://gypkc3x8cumm"]
 
-[ext_resource type="PackedScene" uid="uid://coke4xdeeopxp" path="res://cannon.tscn" id="1_7c1cv"]
+[ext_resource type="PackedScene" uid="uid://coke4xdeeopxp" path="res://cannon/cannon.tscn" id="1_7c1cv"]
 [ext_resource type="Script" path="res://world.gd" id="1_u52jl"]
+[ext_resource type="PackedScene" uid="uid://cqfofb6oadsop" path="res://target/target.tscn" id="3_podr1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6n2oy"]
 
 [sub_resource type="Environment" id="Environment_rjcw5"]
+background_mode = 1
 ambient_light_source = 2
 ambient_light_color = Color(0.572988, 0.572988, 0.572988, 1)
 
@@ -23,5 +25,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.841547, 0)
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_rjcw5")
 
-[node name="CSGBox3D2" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.175442, 1.43423, -4.35599)
+[node name="Target" parent="." instance=ExtResource("3_podr1")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 5.3448, -15.3375)
+
+[node name="Target2" parent="." instance=ExtResource("3_podr1")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.894306, 3.07853, 2.86535)
