@@ -4,7 +4,7 @@ An exercise for CS315 that demonstrates 3D physics via flinging a 3D object thro
 
 ## How to play
 
-TODO: WEB DEMO
+Click [here](bsu-cs315.github.io/e3-robinson/) to play the web demo.
 
 Press "Play" to start the game.
 
