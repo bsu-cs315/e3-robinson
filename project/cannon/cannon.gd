@@ -10,7 +10,6 @@ var swivel := -TAU/8
 var swivel_change_rate := TAU/8
 var _launched := false
 
-@onready var cannon_shaft: CSGCylinder3D = $CSGCylinder3D
 @onready var angle_label: Label = $AngleLabel
 @onready var power_label: Label = $PowerLabel
 @onready var reload_label: Label = $ReloadLabel

@@ -17,7 +17,7 @@ offset_left = 515.0
 offset_top = 171.0
 offset_right = 637.0
 offset_bottom = 194.0
-text = "Shoot da balls..."
+text = "Shoot the balls..."
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 1
